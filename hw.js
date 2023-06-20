@@ -177,33 +177,33 @@
 */
 
 
-    let meters = 25;
-    let lastDigit = meters % 10;
+    let meters = 11000;
     let kilometers = meters / 1000;
-    let lastDigitKilometer = kilometers % 10;
     let meterEnding;
     let kilometerEnding;
 
-    if (lastDigit === 1) {
-        meterEnding = "метр";
-    } else {
-        if (lastDigit < 5 && lastDigit != 0){
+    if(meters === Math.round(meters)){
+    if (meters % 10 === 0 || meters % 10 >=5 || meters % 100 >= 11 && meters % 100 <= 19) {
+        meterEnding = "метрів";
+    }else if (meters % 10 === 1){
+        meterEnding = "метр"
+    }else if (meters % 10 >= 2 && meters % 10 < 5){
+            meterEnding = "метри"
+        }
+    }else {
             meterEnding = "метра"
         }
-        else {
-            meterEnding = "метрів"
-        }
-    }
 
-    if (lastDigitKilometer === 1) {
-        kilometerEnding = "кілометр";
-    } else {
-        if (lastDigitKilometer < 5 && lastDigitKilometer != 0){
-            kilometerEnding = "кілометра"
+    if(kilometers === Math.round(kilometers)){
+    if (kilometers % 10 === 0 || kilometers % 10 >=5 || kilometers % 100 >= 11 && kilometers % 100 <= 19) {
+        kilometerEnding = "кілометрів";
+    }else if (kilometers % 10 === 1){
+        kilometerEnding = "кілометр"
+    }else if (kilometers % 10 >= 2 && kilometers % 10 < 5){
+        kilometerEnding = "кілометри"
         }
-        else {
-            kilometerEnding = "кілометрів"
-        }
-    }
-
+    }else {
+    kilometerEnding = "кілометра"
+          }
+          
     console.log(meters + " " + meterEnding + " це " + kilometers + " " + kilometerEnding);

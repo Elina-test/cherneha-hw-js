@@ -57,6 +57,13 @@ for(let i = 0; i < 8; i++){
 for(let i = 0; i < 3; i++){
     console.log(`i = ${i}`); //інтерполяція виведе i = 0, i = 1, i = 2
 
-    for(let j = 0; j < 3; j++)
+    for(let j = 0; j < 3; j++){
         console.log(`j = ${j}`);
+    }
+}
+
+let elements = ['element1', 'element2', 'element3']
+
+for(let i = 0; i < elements.length; i++){
+    console.log(`element with index ${i} = ${elements[i]}`);
 }

@@ -26,3 +26,22 @@ else{
 // (true) ? <умова істинна> : <умова хибна>
 
 (1==1) ? console.log("умова істинна") : console.log("умова хибна") //тернарний оператор
+
+//оператор switch. Використовується, якщо є багато умов.
+
+let number = 500;
+
+switch(number){
+    case 49:
+        console.log('Value = 49');
+        break;
+    case 50:
+        console.log('Value = 50');
+        break; 
+    case 500:
+        console.log('Value = 500');
+        break;
+    default:
+        console.log('Default output');
+        break;
+}
